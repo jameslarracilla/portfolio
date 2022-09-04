@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Mulish";
+  padding: 10px;
+  font-size: 10px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Abril Fatface";
+}
+
+header {
+  font-weight: 900;
+  font-size: 1rem;
+  position: absolute;
+  left: 30px;
+  top: 20px;
+}
+
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  font-family: inherit;
+  background-color: #000;
+  color: #fff;
+  padding: 7px 10px;
+  font-size: 1.2rem;
+  position: relative;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #000;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f9efe7;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero h1 span {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.hero h1 span::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  height: 40%;
+  width: 100%;
+  background-color: #ffe872;
+}
+
+.hero p {
+  font-weight: light;
+  text-align: justify;
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
+}
+
+.projects {
+  margin-top: 3rem;
+}
+
+.projects__header {
+  font-family: "Mulish";
+  font-weight: 300;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.project img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.362);
+}
+
+.project__title {
+  font-family: inherit;
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.project__techs {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.project__techs li {
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #f9efe7;
+  padding: 3px 10px;
+}
+
+.project__description {
+  font-size: 1rem;
+  line-height: 150%;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.li-hidden {
+  opacity: 0;
+}
+footer {
+  height: 4rem;
+  background-color: #f9efe7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  padding: 5px;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+footer ul a {
+  color: #000;
+}
+
+footer ul a:hover {
+  color: rgb(127, 127, 127);
+}
+
+@media (min-width: 900px) {
+  .hero {
+    align-items: flex-start;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+    width: 60%;
+    text-align: left;
+  }
+
+  .hero p {
+    width: 55%;
+  }
+
+  .projects__header {
+    font-size: 4rem;
+  }
+
+  .projects {
+    display: flex;
+    gap: 5%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .project {
+    width: 40%;
+    align-items: flex-start;
+  }
+
+  .project__content {
+    width: 100%;
+  }
+  .actions {
+    display: flex;
+    justify-content: center;
+  }
+  .project__img {
+    display: flex;
+    height: 300px;
+    justify-content: center;
+  }
+
+  .project__title {
+    text-align: left;
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+}
